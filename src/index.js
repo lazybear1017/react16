@@ -9,9 +9,7 @@ if (process.env.NODE_ENV === 'development') {
   require('./__mocks__/mock')
 }
 
-function render (APP) {
-  ReactDOM.render(<APP />, document.getElementById('app'))
-}
+const render = APP => ReactDOM.render(<APP />, document.getElementById('app'))
 
 render(App)
 

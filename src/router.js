@@ -10,23 +10,45 @@ export default [
   },
   {
     path: '/',
-    redirect: '/dashboard'
+    redirect: '/pandect'
   },
   {
-    path: '/dashboard',
-    redirect: '/dashboard/analysis',
+    path: '/pandect',
+    component: lazy(() => import('@/routes/Pandect'))
+  },
+  {
+    path: '/html',
+    redirect: '/html/analysis',
     routes: [
       {
-        path: '/dashboard/analysis',
+        path: '/html/analysis',
         component: lazy(() => import('@/routes/Analysis'))
       },
       {
-        path: '/dashboard/table',
+        path: '/html/table',
         component: lazy(() => import('@/routes/Table'))
       },
       {
-        path: '/dashboard/form',
+        path: '/html/form',
         component: lazy(() => import('@/routes/Form'))
+      }
+    ]
+  },
+  {
+    path: '/react',
+    redirect: '/react/kernel',
+    routes: [
+      {
+        path: '/react/kernel',
+        component: lazy(() => import('@/routes/React/Kernel'))
+      },
+      {
+        path: '/react/highOrder',
+        component: lazy(() => import('@/routes/React/HighOrder'))
+      },
+      {
+        path: '/react/testDemo',
+        component: lazy(() => import('@/routes/React/TestDemo'))
       }
     ]
   },

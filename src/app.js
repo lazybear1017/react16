@@ -9,24 +9,63 @@ import locales from './common/locales.json'
 import React, { PureComponent } from 'react'
 import BasicLayout from '@uyun/ec-basic-layout'
 import { Router, Link } from 'react-router-dom'
-import { LocaleProvider, Icon } from '@uyun/components'
+import { LocaleProvider, Icon, Button } from '@uyun/components'
 import { history, renderRoutes } from './utils/router'
 import enUS from '@uyun/components/lib/locale-provider/en_US'
 import zhCN from '@uyun/components/lib/locale-provider/zh_CN'
 import 'moment/locale/zh-cn'
+import './app.less'
 
 intl.merge(locales)
 moment.locale('zh-cn')
 moment.defaultFormat = 'YYYY-MM-DD HH:mm'
 
 export default class App extends PureComponent {
+  state = {
+    menus: [],
+    collapsed: false
+  }
+
   get menus () {
+    const { collapsed } = this.state
     return [
       {
-        key: 'dashboard',
-        name: __('menu-dashboard'),
-        type: 'group',
-        path: 'dashboard',
+        key: 'create',
+        type: 'component',
+        component: (
+          <div style={{
+            padding: collapsed ? '0 5px 10px' : '0 20px 10px',
+            transition: 'all 0.3s'
+          }}>
+            <Button
+              style={{
+                width: '100%',
+                padding: '0 5px',
+                transition: 'all 0.3s'
+              }}
+              type="primary"
+              size="large"
+            >
+              {
+                collapsed ? <Icon type="plus" /> : '创建'
+              }
+            </Button>
+          </div>
+        )
+      },
+      {
+        key: 'pandect',
+        name: '总览',
+        type: 'link',
+        icon: <i className="iconfont icon-pandect" />,
+        path: 'pandect'
+      },
+      {
+        key: 'html',
+        name: 'HTML',
+        type: 'sub',
+        path: 'html',
+        icon: <i className="iconfont icon-html" />,
         children: [
           {
             key: 'analysis',
@@ -48,6 +87,36 @@ export default class App extends PureComponent {
             type: 'link',
             icon: <Icon type="file-text" />,
             path: 'form'
+          }
+        ]
+      },
+      {
+        key: 'react',
+        name: 'REACT',
+        type: 'sub',
+        path: 'react',
+        icon: <i className="iconfont icon-react" />,
+        children: [
+          {
+            key: 'kernel',
+            name: '核心概念',
+            type: 'link',
+            icon: <i className="iconfont icon-kernel" />,
+            path: 'kernel'
+          },
+          {
+            key: 'highOrder',
+            name: '高阶指引',
+            type: 'link',
+            icon: <i className="iconfont icon-high-order" />,
+            path: 'highOrder'
+          },
+          {
+            key: 'testDemo',
+            name: '测试示例',
+            type: 'link',
+            icon: <i className="iconfont icon-demo-test" />,
+            path: 'testDemo'
           }
         ]
       },
@@ -80,13 +149,23 @@ export default class App extends PureComponent {
 
   render () {
     const locale = cookie.get('language') === 'en_US' ? enUS : zhCN
-
+    const { collapsed } = this.state
     return (
       <Provider {...stores}>
         <LocaleProvider locale={locale}>
           <Menus.Provider value={this.menus}>
             <Router history={history}>
-              <BasicLayout sideMenu={{ items: this.menus, Link: Link }}>{renderRoutes(router)}</BasicLayout>
+              <BasicLayout
+                sideMenu={{
+                  items: this.menus,
+                  Link: Link,
+                  collapsed: collapsed,
+                  onCollapse: (collapsed) => {
+                    this.setState({ collapsed })
+                  }
+                }}>
+                {renderRoutes(router)}
+              </BasicLayout>
             </Router>
           </Menus.Provider>
         </LocaleProvider>
