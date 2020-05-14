@@ -49,6 +49,10 @@ export default [
       {
         path: '/react/testDemo',
         component: lazy(() => import('@/routes/React/TestDemo'))
+      },
+      {
+        path: '/react/gaojiezujian',
+        component: lazy(() => import('@/routes/React/TestDemoo'))
       }
     ]
   },

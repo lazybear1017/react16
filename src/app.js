@@ -20,6 +20,7 @@ intl.merge(locales)
 moment.locale('zh-cn')
 moment.defaultFormat = 'YYYY-MM-DD HH:mm'
 
+Menus.displayName = 'xcf'
 export default class App extends PureComponent {
   state = {
     menus: [],
@@ -117,6 +118,13 @@ export default class App extends PureComponent {
             type: 'link',
             icon: <i className="iconfont icon-demo-test" />,
             path: 'testDemo'
+          },
+          {
+            key: 'gaojiezujian',
+            name: '高阶组件',
+            type: 'link',
+            icon: <i className="iconfont icon-demo-test" />,
+            path: 'gaojiezujian'
           }
         ]
       },

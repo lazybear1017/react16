@@ -12,6 +12,7 @@ export default class Kernel extends React.Component {
       <br />
       <h2>数据是向下流动的</h2>
       <h4>不管是父组件或是子组件都无法知道某个组件是有状态的还是无状态的，并且它们也并不关心它是函数组件还是 class 组件。这就是为什么称 state 为局部的或是封装的的原因</h4>
+      <h3>React 中没有“槽”这一概念的限制，你可以将任何东西作为 props 进行传递。</h3>
     </div>
   }
 }
