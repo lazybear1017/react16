@@ -23,7 +23,6 @@ moment.defaultFormat = 'YYYY-MM-DD HH:mm'
 Menus.displayName = 'xcf'
 export default class App extends PureComponent {
   state = {
-    menus: [],
     collapsed: false
   }
 
@@ -48,7 +47,7 @@ export default class App extends PureComponent {
               size="large"
             >
               {
-                collapsed ? <Icon type="plus" /> : '创建'
+                collapsed ? <Icon type="plus" /> : <div><Icon type="plus" />  创建</div>
               }
             </Button>
           </div>
@@ -125,6 +124,13 @@ export default class App extends PureComponent {
             type: 'link',
             icon: <i className="iconfont icon-demo-test" />,
             path: 'gaojiezujian'
+          },
+          {
+            key: 'reacthooks',
+            name: 'Hooks',
+            type: 'link',
+            icon: <i className="iconfont icon-demo-test" />,
+            path: 'reacthooks'
           }
         ]
       },

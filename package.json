@@ -14,12 +14,12 @@
   "test": "jest"
  },
  "dependencies": {
-  "@uyun/components": "^0.1.7",
+  "@uyun/components": "0.2.3",
   "@uyun/ec-basic-layout": "^1.3.2",
-  "@uyun/ec-user-role": "^0.3.10",
+  "@uyun/ec-user-role": "0.4.0",
   "@uyun/everest-styles": "^4.2.0",
   "@uyun/react-polyfill": "^0.0.3",
-  "@uyun/utils": "^0.1.3",
+  "@uyun/utils": "0.2.0",
   "echarts": "^4.2.1",
   "echarts-for-react": "^2.0.15-beta.0",
   "history": "^4.9.0",
@@ -40,6 +40,7 @@
   "@uyun/eslint-config-standard": "^0.4.4",
   "@uyun/everest-i18n": "^2.3.2",
   "babel-plugin-import": "^1.12.0",
+  "eslint-plugin-react-hooks": "^4.0.4",
   "jest": "^24.8.0",
   "mockjs": "^1.0.1-beta3"
  },

@@ -60,7 +60,8 @@ export default class TestDemo extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      showWarning: true
+      showWarning: true,
+      name: 'james'
     }
     this.testThis4 = this.testThis4.bind(this)
   }
@@ -88,6 +89,8 @@ export default class TestDemo extends React.Component {
     this.refs.xcf.setState({ msg: '熊程峰熊程峰111' })
   }
 
+  changeName=() => this.setState({ name: '高科技' })
+
   render () {
     return <div>
       <ThemeContext.Provider value="dark">
@@ -108,7 +111,7 @@ export default class TestDemo extends React.Component {
           <h1 data-xcf="xcf">FuncBorder熊程峰</h1>
         </FuncBorder>
         <Suspense fallback={<div>Loading...</div>}>
-          <OtherComponent />
+          <OtherComponent name={this.state.name} changeName={this.changeName} />
         </Suspense>
       </ThemeContext.Provider>
     </div>

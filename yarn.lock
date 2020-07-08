@@ -1423,10 +1423,10 @@
     semver "^7.1.3"
     webpack-sources "^1.4.3"
 
-"@uyun/components@^0.1.7":
-  version "0.1.28"
-  resolved "http://rnpm.uyundev.cn/@uyun/components/download/@uyun/components-0.1.28.tgz#8eddbe06fbf5c8f07c08341dcc6f09d0ee84446b"
-  integrity sha1-jt2+Bvv1yPB8CDQdzG8J0O6ERGs=
+"@uyun/components@0.2.3":
+  version "0.2.3"
+  resolved "http://rnpm.uyundev.cn/@uyun/components/download/@uyun/components-0.2.3.tgz#cedf875246a17305dda020228503b1f4bc915fbb"
+  integrity sha1-zt+HUkahcwXdoCAihQOx9LyRX7s=
   dependencies:
     "@ant-design/icons" "~1.1.15"
     "@ant-design/icons-react" "~1.1.2"
@@ -1518,10 +1518,10 @@
     prop-types "^15.5.7"
     ramda "^0.25.0"
 
-"@uyun/ec-user-role@^0.3.10":
-  version "0.3.10"
-  resolved "http://rnpm.uyundev.cn/@uyun/ec-user-role/download/@uyun/ec-user-role-0.3.10.tgz#41786b645e9e7b274470f6840bedefbddb3c4f64"
-  integrity sha1-QXhrZF6eeydEcPaEC+3vvds8T2Q=
+"@uyun/ec-user-role@0.4.0":
+  version "0.4.0"
+  resolved "http://rnpm.uyundev.cn/@uyun/ec-user-role/download/@uyun/ec-user-role-0.4.0.tgz#3640129e6dce250bd873839bc114f7eb635dd226"
+  integrity sha1-NkASnm3OJQvYc4ObwRT362Nd0iY=
   dependencies:
     "@uyun/ec-util" "^1.0.1"
     "@uyun/everest-i18n" "2.2.0"
@@ -1626,10 +1626,24 @@
     rxjs "^6.4.0"
     rxjs-compat "^6.4.0"
 
-"@uyun/utils@0.1.3", "@uyun/utils@^0.1.3":
+"@uyun/utils@0.1.3":
   version "0.1.3"
   resolved "http://rnpm.uyundev.cn/@uyun/utils/download/@uyun/utils-0.1.3.tgz#5db43b0084d184f593a07af8199d0c41057e64ff"
   integrity sha1-XbQ7AITRhPWToHr4GZ0MQQV+ZP8=
+  dependencies:
+    "@uyun/everest-i18n" "^2.0.4"
+    axios "^0.18.0"
+    axios-mock-adapter "^1.16.0"
+    babel-runtime "^6.26.0"
+    js-base64 "^2.5.1"
+    js-cookie "^2.2.0"
+    qs "^6.6.0"
+    uuid "^3.3.2"
+
+"@uyun/utils@0.2.0":
+  version "0.2.0"
+  resolved "http://rnpm.uyundev.cn/@uyun/utils/download/@uyun/utils-0.2.0.tgz#166827be0605ca9f4357614dfca40e67d621617f"
+  integrity sha1-FmgnvgYFyp9DV2FN/KQOZ9YhYX8=
   dependencies:
     "@uyun/everest-i18n" "^2.0.4"
     axios "^0.18.0"
@@ -3850,9 +3864,9 @@ doctrine@^3.0.0:
     esutils "^2.0.2"
 
 dom-align@^1.7.0:
-  version "1.11.1"
-  resolved "http://rnpm.uyundev.cn/dom-align/download/dom-align-1.11.1.tgz#7592be99a660a36cdedc1d6eeb22b8109d758cae"
-  integrity sha1-dZK+maZgo2ze3B1u6yK4EJ11jK4=
+  version "1.12.0"
+  resolved "http://rnpm.uyundev.cn/dom-align/download/dom-align-1.12.0.tgz#56fb7156df0b91099830364d2d48f88963f5a29c"
+  integrity sha1-VvtxVt8LkQmYMDZNLUj4iWP1opw=
 
 dom-closest@^0.2.0:
   version "0.2.0"
@@ -4267,6 +4281,11 @@ eslint-plugin-react-hooks@^1.6.1:
   version "1.7.0"
   resolved "http://rnpm.uyundev.cn/eslint-plugin-react-hooks/download/eslint-plugin-react-hooks-1.7.0.tgz#6210b6d5a37205f0b92858f895a4e827020a7d04"
   integrity sha1-YhC21aNyBfC5KFj4laToJwIKfQQ=
+
+eslint-plugin-react-hooks@^4.0.4:
+  version "4.0.4"
+  resolved "http://rnpm.uyundev.cn/eslint-plugin-react-hooks/download/eslint-plugin-react-hooks-4.0.4.tgz#aed33b4254a41b045818cacb047b81e6df27fa58"
+  integrity sha1-rtM7QlSkGwRYGMrLBHuB5t8n+lg=
 
 eslint-plugin-react@^7.14.3:
   version "7.19.0"
@@ -7237,7 +7256,12 @@ mockjs@^1.0.1-beta3:
   dependencies:
     commander "*"
 
-moment@2.x, moment@^2.22.2, moment@^2.24.0:
+moment@2.x, moment@^2.22.2:
+  version "2.27.0"
+  resolved "http://rnpm.uyundev.cn/moment/download/moment-2.27.0.tgz#8bff4e3e26a236220dfe3e36de756b6ebaa0105d"
+  integrity sha1-i/9OPiaiNiIN/j423nVrbrqgEF0=
+
+moment@^2.24.0:
   version "2.25.3"
   resolved "http://rnpm.uyundev.cn/moment/download/moment-2.25.3.tgz#252ff41319cf41e47761a1a88cab30edfe9808c0"
   integrity sha1-JS/0ExnPQeR3YaGojKsw7f6YCMA=
@@ -8785,14 +8809,14 @@ rc-animate@2.x, rc-animate@^2.10.1, rc-animate@^2.3.0, rc-animate@^2.5.4:
     react-lifecycles-compat "^3.0.4"
 
 rc-animate@^3.0.0-rc.1, rc-animate@^3.0.0-rc.4, rc-animate@^3.0.0-rc.5:
-  version "3.0.0"
-  resolved "http://rnpm.uyundev.cn/rc-animate/download/rc-animate-3.0.0.tgz#f76d7051136b7d650fb3d29366a160e95a369c0a"
-  integrity sha1-921wURNrfWUPs9KTZqFg6Vo2nAo=
+  version "3.1.0"
+  resolved "http://rnpm.uyundev.cn/rc-animate/download/rc-animate-3.1.0.tgz#051b689c2c7194e4c8ae016d32a0e5f9de6c8baa"
+  integrity sha1-BRtonCxxlOTIrgFtMqDl+d5si6o=
   dependencies:
     "@ant-design/css-animation" "^1.7.2"
     classnames "^2.2.6"
     raf "^3.4.0"
-    rc-util "^4.15.3"
+    rc-util "^5.0.1"
 
 rc-calendar@~9.8.0:
   version "9.8.2"
@@ -8913,9 +8937,9 @@ rc-form@^2.2.7:
     warning "^4.0.3"
 
 rc-hammerjs@~0.6.0:
-  version "0.6.9"
-  resolved "http://rnpm.uyundev.cn/rc-hammerjs/download/rc-hammerjs-0.6.9.tgz#9a4ddbda1b2ec8f9b9596091a6a989842a243907"
-  integrity sha1-mk3b2hsuyPm5WWCRpqmJhCokOQc=
+  version "0.6.10"
+  resolved "http://rnpm.uyundev.cn/rc-hammerjs/download/rc-hammerjs-0.6.10.tgz#1831a3bd8f2199700bfcc5ad6b20a35630aeb5e0"
+  integrity sha1-GDGjvY8hmXAL/MWtayCjVjCuteA=
   dependencies:
     babel-runtime "6.x"
     hammerjs "^2.0.8"
@@ -9167,14 +9191,22 @@ rc-upload@~2.6.0:
     warning "4.x"
 
 rc-util@^4.0.4, rc-util@^4.1.1, rc-util@^4.10.0, rc-util@^4.13.0, rc-util@^4.15.3, rc-util@^4.15.7, rc-util@^4.3.0, rc-util@^4.4.0, rc-util@^4.5.0, rc-util@^4.5.1:
-  version "4.20.5"
-  resolved "http://rnpm.uyundev.cn/rc-util/download/rc-util-4.20.5.tgz#f7c77569e971ae6a8ad56f899cadd22275398325"
-  integrity sha1-98d1aelxrmqK1W+JnK3SInU5gyU=
+  version "4.21.1"
+  resolved "http://rnpm.uyundev.cn/rc-util/download/rc-util-4.21.1.tgz#88602d0c3185020aa1053d9a1e70eac161becb05"
+  integrity sha1-iGAtDDGFAgqhBT2aHnDqwWG+ywU=
   dependencies:
     add-dom-event-listener "^1.1.0"
     prop-types "^15.5.10"
     react-is "^16.12.0"
     react-lifecycles-compat "^3.0.4"
+    shallowequal "^1.1.0"
+
+rc-util@^5.0.1:
+  version "5.0.4"
+  resolved "http://rnpm.uyundev.cn/rc-util/download/rc-util-5.0.4.tgz#297bd719b1bd00b3c947a884ab7ef0a07c55dce6"
+  integrity sha1-KXvXGbG9ALPJR6iEq37woHxV3OY=
+  dependencies:
+    react-is "^16.12.0"
     shallowequal "^1.1.0"
 
 rc@^1.2.8:

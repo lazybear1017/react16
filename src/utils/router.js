@@ -39,7 +39,7 @@ export const renderRoutes = routes => {
   const router = formatRouter(routes)
 
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<div style={{ height: '100%', textAlign: 'center', paddingTop: 120 }}>Loading...</div>}>
       <Switch>
         {router.redirects.map((route, i) => {
           return <Redirect key={`redirect-${i}`} {...route} />

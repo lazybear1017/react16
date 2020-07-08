@@ -53,6 +53,10 @@ export default [
       {
         path: '/react/gaojiezujian',
         component: lazy(() => import('@/routes/React/TestDemoo'))
+      },
+      {
+        path: '/react/reacthooks',
+        component: lazy(() => import('@/routes/React/ReactHooks'))
       }
     ]
   },
