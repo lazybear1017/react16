@@ -21,6 +21,8 @@ moment.locale('zh-cn')
 moment.defaultFormat = 'YYYY-MM-DD HH:mm'
 
 Menus.displayName = 'xcf'
+// const xcfStores = React.createContext({})
+// xcfStores.displayName = 'xiongcf'
 export default class App extends PureComponent {
   state = {
     collapsed: false
@@ -168,6 +170,7 @@ export default class App extends PureComponent {
       <Provider {...stores}>
         <LocaleProvider locale={locale}>
           <Menus.Provider value={this.menus}>
+            {/* <xcfStores.Provider value={stores}> */}
             <Router history={history}>
               <BasicLayout
                 sideMenu={{
@@ -181,6 +184,7 @@ export default class App extends PureComponent {
                 {renderRoutes(router)}
               </BasicLayout>
             </Router>
+            {/* </xcfStores.Provider> */}
           </Menus.Provider>
         </LocaleProvider>
       </Provider>

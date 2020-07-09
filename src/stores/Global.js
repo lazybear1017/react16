@@ -12,4 +12,12 @@ export default class Global {
 
     this.themes.push(this.theme)
   }
+
+  @action _changeTheme () {
+    if (this.theme === 'blue') {
+      this.theme = 'red'
+    } else {
+      this.theme = 'blue'
+    }
+  }
 }
