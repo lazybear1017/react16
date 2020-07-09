@@ -61,6 +61,16 @@ export default [
     ]
   },
   {
+    path: '/typescript',
+    redirect: '/typescript/test1',
+    routes: [
+      {
+        path: '/typescript/test1',
+        component: lazy(() => import('@/routes/Tscript/Test1'))
+      }
+    ]
+  },
+  {
     path: '/user-role',
     component: lazy(() => import('@/routes/UserRole'))
   },

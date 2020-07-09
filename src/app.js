@@ -137,6 +137,22 @@ export default class App extends PureComponent {
         ]
       },
       {
+        key: 'typescript',
+        name: 'TypeScript',
+        type: 'sub',
+        path: 'typescript',
+        icon: <i className="iconfont icon-react" />,
+        children: [
+          {
+            key: 'test1',
+            name: '基础配置',
+            type: 'link',
+            icon: <i className="iconfont icon-kernel" />,
+            path: 'test1'
+          }
+        ]
+      },
+      {
         key: 'search',
         name: __('menu-search'),
         type: 'default',
